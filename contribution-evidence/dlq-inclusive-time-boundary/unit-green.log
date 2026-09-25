@@ -1,0 +1,209 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.rocketmq:rocketmq-studio >--------------------
+[INFO] Building RocketMQ Studio 3.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.21.0-GA during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ rocketmq-studio ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ rocketmq-studio ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 57 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:copy-resources (project-legal-resources) @ rocketmq-studio ---
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ rocketmq-studio ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 708 source files with javac [debug parameters release 21] to target/classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/main/java/org/apache/rocketmq/studio/cluster/broker/RuntimeAdminClientResolver.java: Some input files use or override a deprecated API.
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/main/java/org/apache/rocketmq/studio/cluster/broker/RuntimeAdminClientResolver.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ rocketmq-studio ---
+[INFO] Copying 4 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ rocketmq-studio ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 289 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[WARNING] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/test/java/org/apache/rocketmq/studio/ops/ai/ToolControllerTest.java:[64,43] org.springframework.http.converter.json.MappingJackson2HttpMessageConverter in org.springframework.http.converter.json has been deprecated and marked for removal
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/test/java/org/apache/rocketmq/studio/cluster/broker/RuntimeAdminClientResolverTest.java: Some input files use or override a deprecated API.
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/test/java/org/apache/rocketmq/studio/cluster/broker/RuntimeAdminClientResolverTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/test/java/org/apache/rocketmq/studio/auth/AuthServiceDatabaseTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/test/java/org/apache/rocketmq/studio/auth/AuthServiceDatabaseTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ rocketmq-studio ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.rocketmq.studio.provider.apache.RocketMQDLQProviderTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/home/dev/.m2/repository/net/bytebuddy/byte-buddy-agent/1.18.10/byte-buddy-agent-1.18.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+17:19:32.516 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-1 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.525 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend completed: instanceId=instance-a, group=group-a, dlqTopic=%DLQ%group-a, targetTopic=target-topic, matched=1, resent=0, failed=1, scanIncomplete=false, scanTruncated=false, scanFailedQueues=0, reportedFailures=1, failuresTruncated=false
+17:19:32.602 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ topic %DLQ%group-a has no route/queue yet; returning empty scan result
+17:19:32.636 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Failed to resolve selected dead letter uniq-key-1 from %DLQ%group-a: unique key lookup handled by MQAdminImpl
+17:19:32.638 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Selected DLQ resend completed: instanceId=instance-a, group=group-a, selected=1, matched=0, resent=0, failed=0, reportedFailures=0, failuresTruncated=false
+17:19:32.673 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend completed: instanceId=instance-a, group=group-a, dlqTopic=%DLQ%group-a, targetTopic=orders, matched=1, resent=1, failed=0, scanIncomplete=false, scanTruncated=false, scanFailedQueues=0, reportedFailures=0, failuresTruncated=false
+17:19:32.698 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend completed: instanceId=instance-a, group=group-a, dlqTopic=%DLQ%group-a, targetTopic=target-topic, matched=0, resent=0, failed=0, scanIncomplete=false, scanTruncated=false, scanFailedQueues=0, reportedFailures=0, failuresTruncated=false
+17:19:32.708 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Failed to collect dead letters from %DLQ%group-a: broker unavailable
+17:19:32.726 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Selected DLQ resend completed: instanceId=instance-a, group=group-a, selected=1, matched=1, resent=1, failed=0, reportedFailures=0, failuresTruncated=false
+17:19:32.737 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Stop DLQ scan for %DLQ%group-a because queue MessageQueue [topic=%DLQ%group-a, brokerName=broker-a, queueId=0] did not advance offset 10
+17:19:32.737 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend completed: instanceId=instance-a, group=group-a, dlqTopic=%DLQ%group-a, targetTopic=target-topic, matched=0, resent=0, failed=0, scanIncomplete=false, scanTruncated=false, scanFailedQueues=0, reportedFailures=0, failuresTruncated=false
+17:19:32.745 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-0 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.745 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-1 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.746 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-2 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.746 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-3 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.746 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-4 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.746 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-5 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.746 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-6 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.746 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-7 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.747 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-8 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.747 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-9 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.748 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-10 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.748 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-11 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.748 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-12 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.748 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-13 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.748 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-14 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.749 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-15 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.749 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-16 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.749 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-17 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.749 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-18 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.749 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-19 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.749 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-20 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.750 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-21 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.750 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-22 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.750 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-23 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.750 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-24 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.750 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-25 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.750 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-26 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.750 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-27 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.750 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-28 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.751 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-29 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.751 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-30 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.751 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-31 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.751 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-32 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.752 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-33 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.752 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-34 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.752 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-35 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.752 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-36 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.752 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-37 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.752 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-38 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.753 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-39 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.753 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-40 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.753 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-41 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.753 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-42 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.753 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-43 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.754 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-44 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.754 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-45 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.754 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-46 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.754 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-47 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.754 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-48 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.754 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-49 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.754 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-50 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.754 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-51 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.754 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-52 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.755 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-53 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.755 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-54 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.755 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-55 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.755 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-56 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.755 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-57 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.756 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-58 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.756 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-59 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.756 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-60 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.756 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-61 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.757 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-62 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.757 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-63 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.758 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-64 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.759 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-65 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.759 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-66 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.759 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-67 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.759 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-68 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.759 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-69 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.759 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-70 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.759 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-71 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.759 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-72 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.760 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-73 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.760 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-74 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.760 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-75 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.760 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-76 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.760 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-77 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.760 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-78 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.760 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-79 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.760 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-80 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.761 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-81 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.761 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-82 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.761 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-83 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-84 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-85 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-86 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-87 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-88 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-89 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-90 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-91 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-92 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-93 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-94 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-95 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.762 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-96 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.763 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-97 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.763 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-98 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.763 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-99 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.763 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend was not accepted: msgId=msg-100 topic=target-topic sendStatus=FLUSH_DISK_TIMEOUT
+17:19:32.764 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend completed: instanceId=instance-a, group=group-a, dlqTopic=%DLQ%group-a, targetTopic=target-topic, matched=101, resent=0, failed=101, scanIncomplete=false, scanTruncated=false, scanFailedQueues=0, reportedFailures=100, failuresTruncated=true
+17:19:32.787 [main] WARN org.apache.rocketmq.studio.provider.apache.BrokerTopologyGuards -- Could not verify broker topology for msgId=AC1E0A6400002A9F0000000000003039: nameserver unreachable
+17:19:32.788 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Selected DLQ resend completed: instanceId=instance-a, group=group-a, selected=1, matched=0, resent=0, failed=0, reportedFailures=0, failuresTruncated=false
+17:19:32.858 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend completed: instanceId=instance-a, group=group-a, dlqTopic=%DLQ%group-a, targetTopic=target-topic, matched=5000, resent=5000, failed=0, scanIncomplete=true, scanTruncated=true, scanFailedQueues=0, reportedFailures=0, failuresTruncated=false
+17:19:32.881 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ topic %DLQ%group-a has no route/queue yet; returning empty scan result
+17:19:32.886 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend completed: instanceId=instance-a, group=group-a, dlqTopic=%DLQ%group-a, targetTopic=target-topic, matched=1, resent=1, failed=0, scanIncomplete=false, scanTruncated=false, scanFailedQueues=0, reportedFailures=0, failuresTruncated=false
+17:19:32.893 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend completed: instanceId=instance-a, group=group-a, dlqTopic=%DLQ%group-a, targetTopic=target-topic, matched=1, resent=1, failed=0, scanIncomplete=false, scanTruncated=false, scanFailedQueues=0, reportedFailures=0, failuresTruncated=false
+17:19:32.897 [main] WARN org.apache.rocketmq.studio.provider.apache.BrokerTopologyGuards -- Rejecting decoded broker address 10.2.3.4:10911 for msgId=0A02030400002A9F0000000000003039 because it is not a known broker endpoint for the selected instance
+17:19:32.897 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Selected DLQ resend completed: instanceId=instance-a, group=group-a, selected=1, matched=0, resent=0, failed=0, reportedFailures=0, failuresTruncated=false
+17:19:32.904 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Selected DLQ resend completed: instanceId=instance-a, group=group-a, selected=1, matched=1, resent=1, failed=0, reportedFailures=0, failuresTruncated=false
+17:19:32.917 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend completed: instanceId=instance-a, group=group-a, dlqTopic=%DLQ%group-a, targetTopic=target-topic, matched=0, resent=0, failed=0, scanIncomplete=false, scanTruncated=false, scanFailedQueues=0, reportedFailures=0, failuresTruncated=false
+17:19:32.920 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Failed to examine stats for DLQ topic %DLQ%group-a: access denied
+17:19:32.925 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ topic %DLQ%group-a has no route/queue yet; returning empty scan result
+17:19:32.939 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Failed to resend dead letter msgId=selected-msg to topic=orders: broker unavailable
+17:19:32.939 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Selected DLQ resend completed: instanceId=instance-a, group=group-a, selected=1, matched=1, resent=0, failed=1, reportedFailures=1, failuresTruncated=false
+17:19:32.953 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Failed to resolve selected dead letter missing-msg from %DLQ%group-a: message not found
+17:19:32.956 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Selected DLQ resend completed: instanceId=instance-a, group=group-a, selected=2, matched=1, resent=1, failed=0, reportedFailures=0, failuresTruncated=false
+17:19:32.962 [main] WARN org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- Failed to scan DLQ queue MessageQueue [topic=%DLQ%group-a, brokerName=broker-a, queueId=0] in %DLQ%group-a: broker unavailable
+17:19:32.963 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ resend completed: instanceId=instance-a, group=group-a, dlqTopic=%DLQ%group-a, targetTopic=target-topic, matched=0, resent=0, failed=0, scanIncomplete=true, scanTruncated=false, scanFailedQueues=1, reportedFailures=0, failuresTruncated=false
+17:19:32.970 [main] INFO org.apache.rocketmq.studio.provider.apache.RocketMQDLQProvider -- DLQ topic %DLQ%group-a has no route/queue yet; returning empty scan result
+[INFO] Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.891 s -- in org.apache.rocketmq.studio.provider.apache.RocketMQDLQProviderTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 44, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.265 s
+[INFO] Finished at: 2026-09-25T17:19:33Z
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,60 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.rocketmq:rocketmq-studio >--------------------
+[INFO] Building RocketMQ Studio 3.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.21.0-GA during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ rocketmq-studio ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ rocketmq-studio ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 57 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- resources:3.5.0:copy-resources (project-legal-resources) @ rocketmq-studio ---
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ rocketmq-studio ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 708 source files with javac [debug parameters release 21] to target/classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/main/java/org/apache/rocketmq/studio/cluster/broker/RuntimeAdminClientResolver.java: Some input files use or override a deprecated API.
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/main/java/org/apache/rocketmq/studio/cluster/broker/RuntimeAdminClientResolver.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ rocketmq-studio ---
+[INFO] Copying 4 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ rocketmq-studio ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 289 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[WARNING] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/test/java/org/apache/rocketmq/studio/ops/ai/ToolControllerTest.java:[64,43] org.springframework.http.converter.json.MappingJackson2HttpMessageConverter in org.springframework.http.converter.json has been deprecated and marked for removal
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/test/java/org/apache/rocketmq/studio/cluster/broker/RuntimeAdminClientResolverTest.java: Some input files use or override a deprecated API.
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/test/java/org/apache/rocketmq/studio/cluster/broker/RuntimeAdminClientResolverTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/test/java/org/apache/rocketmq/studio/auth/AuthServiceDatabaseTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/src/test/java/org/apache/rocketmq/studio/auth/AuthServiceDatabaseTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- dependency:3.10.0:build-classpath (default-cli) @ rocketmq-studio ---
+[INFO] Wrote classpath file '/home/dev/competitions/wuzhen/repos/rocketmq-studio-dlq/server/target/repro-classpath.txt'.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  30.610 s
+[INFO] Finished at: 2026-09-25T17:08:19Z
+[INFO] ------------------------------------------------------------------------
